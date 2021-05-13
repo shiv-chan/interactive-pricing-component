@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+}
+
+header {
+  height: 20%;
+  background: url(../images/pattern-circles.svg) center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  color: #293356;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+header h2 {
+  width: 55%;
+  margin: 0.5rem auto;
+  color: #858fad;
+}
+
+article {
+  width: 90%;
+  height: 50%;
+  color: #858fad;
+  background-color: white;
+  border-radius: 15px;
+}
+
+article .top {
+  margin: 2rem 1rem;
+}
+
+article .pageviews {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+article .monthly-price {
+  padding: 2rem 0;
+}
+
+article .monthly-price #price-num {
+  color: #293356;
+  font-size: 2rem;
+  font-weight: 800;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+  letter-spacing: -1px;
+}
+
+article .billing span {
+  padding: 0 0.5rem;
+}
+
+article .billing .discount {
+  background-color: #feece7;
+  color: #ff8c66;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5%;
+}
+
+article hr {
+  border: none;
+  border-top: 2px solid #fafbff;
+}
+
+article .bottom ul {
+  padding: 1rem;
+  list-style-type: none;
+}
+
+article .bottom ul li {
+  margin: 0.5rem auto;
+}
+
+article .bottom ul li img {
+  margin-right: 1rem;
+}
+
+article .bottom button {
+  border: none;
+  padding: 0.7rem 3rem;
+  border-radius: 30px;
+  color: #bdccff;
+  background-color: #293356;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafbff;
+}
+
+.container {
+  width: 375px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}

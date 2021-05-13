@@ -1,0 +1,14 @@
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: $pale-blue;
+}
+
+.container {
+	width: 375px;
+	height: 100%;
+	margin: 0 auto;
+	@include flex(column);
+	text-align: center;
+}

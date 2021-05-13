@@ -1,0 +1,93 @@
+header {
+	height: 20%;
+	background: url(../images/pattern-circles.svg) center no-repeat;
+	@include flex(column);
+
+	h1 {
+		color: $dark-blue;
+		font-size: 1.5rem;
+		font-weight: 800;
+	}
+
+	h2 {
+		width: 55%;
+		margin: 0.5rem auto;
+		color: $grayish-blue;
+	}
+}
+
+article {
+	width: 90%;
+	height: 50%;
+	color: $grayish-blue;
+	background-color: $white;
+	border-radius: 15px;
+
+	.top {
+		margin: 2rem 1rem;
+	}
+
+	.pageviews {
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		font-weight: 800;
+		padding-top: 1rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.monthly-price {
+		padding: 2rem 0;
+
+		#price-num {
+			color: $dark-blue;
+			font-size: 2rem;
+			font-weight: 800;
+			vertical-align: middle;
+			padding-right: 0.5rem;
+			letter-spacing: -1px;
+		}
+	}
+
+	.billing {
+		span {
+			padding: 0 0.5rem;
+		}
+
+		.discount {
+			background-color: $light-grayish-red;
+			color: $light-red;
+			padding: 2px 8px;
+			border-radius: 15px;
+			font-size: 0.8rem;
+			letter-spacing: 0.5%;
+		}
+	}
+
+	hr {
+		border: none;
+		border-top: 2px solid $pale-blue;
+	}
+
+	.bottom {
+		ul {
+			padding: 1rem;
+			list-style-type: none;
+
+			li {
+				margin: 0.5rem auto;
+
+				img {
+					margin-right: 1rem;
+				}
+			}
+		}
+
+		button {
+			border: none;
+			padding: 0.7rem 3rem;
+			border-radius: 30px;
+			color: $pale-blue-cta;
+			background-color: $dark-blue;
+		}
+	}
+}
