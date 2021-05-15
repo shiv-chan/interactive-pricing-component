@@ -139,7 +139,63 @@ article .monthly-price #price-num {
 }
 
 article .billing span {
-  padding: 0 0.5rem;
+  font-size: 15px;
+  padding: 0 0.3rem;
+}
+
+article .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+article .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+article .billing .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+article .billing .switch .slider::before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+article .billing .switch input:checked + .slider {
+  background-color: #a5f3eb;
+}
+
+article .billing .switch input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+article .billing .switch .round {
+  width: 100%;
+  border-radius: 34px;
+}
+
+article .billing .switch .round:before {
+  border-radius: 50%;
 }
 
 article .billing .discount {
