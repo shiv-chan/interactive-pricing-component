@@ -3,7 +3,11 @@ const pageviewsNum = document.querySelector('#pageviews-num');
 const priceNum = document.querySelector('#price-num');
 const range = document.querySelector('input[type=range]');
 
+let isHolding = false;
+
 function handleRange() {
+	if (!isHolding) return;
+
 	const value = range.value;
 	if (value <= 20) {
 		pageviewsNum.textContent = '10K';
@@ -21,11 +25,14 @@ function handleRange() {
 		pageviewsNum.textContent = '1M';
 		priceNum.textContent = '$36.00';
 	}
-	applyDiscount();
+	if (checkbox.classList.contains('checked')) applyDiscount();
 }
 
-range.addEventListener('change', handleRange);
-// range.addEventListener('mousemove', handleRange);
+// range.addEventListener('change', handleRange);
+range.addEventListener('mousemove', handleRange);
+range.addEventListener('mousedown', () => (isHolding = true));
+range.addEventListener('mouseup', () => (isHolding = false));
+range.addEventListener('mouseout', () => (isHolding = false));
 
 // toggle switch function
 const checkbox = document.querySelector('input[type=checkbox]');
@@ -36,11 +43,11 @@ function toggleCheck() {
 }
 
 function applyDiscount() {
+	const currentPrice = parseInt(priceNum.textContent.slice(1)); // get the current price as integer
 	if (checkbox.classList.contains('checked')) {
-		const currentPrice = parseInt(priceNum.textContent.slice(1)); // get the current price as integer
 		priceNum.textContent = `$${currentPrice * 0.75}.00`;
 	} else {
-		handleRange();
+		priceNum.textContent = `$${currentPrice * (1 / 0.75)}.00`;
 	}
 }
 
