@@ -5,7 +5,8 @@ const range = document.querySelector('input[type=range]');
 
 let isHolding = false;
 
-function handleRange() {
+function handleRange(e) {
+	e.preventDefault();
 	if (!isHolding) return;
 
 	const value = range.value;
@@ -28,7 +29,7 @@ function handleRange() {
 	if (checkbox.classList.contains('checked')) applyDiscount();
 }
 
-// range.addEventListener('change', handleRange);
+// for desktop ver.
 range.addEventListener('mousemove', handleRange);
 range.addEventListener('mousedown', () => (isHolding = true));
 range.addEventListener('mouseup', () => (isHolding = false));
