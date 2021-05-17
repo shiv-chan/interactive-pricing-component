@@ -1,5 +1,6 @@
 header {
-	height: 20%;
+	padding: 2rem 0;
+	margin: 2rem 0;
 	background: url(../images/pattern-circles.svg) center no-repeat;
 	@include flex(column);
 
@@ -13,18 +14,19 @@ header {
 		width: 55%;
 		margin: 0.5rem auto;
 		color: $grayish-blue;
+		font-weight: 600;
 	}
 }
 
 article {
-	width: 90%;
-	height: 50%;
 	color: $grayish-blue;
 	background-color: $white;
 	border-radius: 15px;
+	margin-bottom: 5rem;
+	padding: 3rem 0;
 
 	.top {
-		margin: 2rem 1rem;
+		margin: 0 1rem 2rem 1rem;
 	}
 
 	.pageviews {
@@ -213,6 +215,11 @@ article {
 			border-radius: 30px;
 			color: $pale-blue-cta;
 			background-color: $dark-blue;
+
+			&:hover {
+				cursor: pointer;
+				background-color: lighten($dark-blue, 10%);
+			}
 		}
 	}
 }

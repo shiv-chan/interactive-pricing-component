@@ -6,7 +6,6 @@ const range = document.querySelector('input[type=range]');
 let isHolding = false;
 
 function handleRange(e) {
-	e.preventDefault();
 	if (!isHolding) return;
 
 	const value = range.value;
