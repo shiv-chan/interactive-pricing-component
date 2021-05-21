@@ -5,12 +5,16 @@ body {
 	background-color: $pale-blue;
 }
 
+body {
+	display: grid;
+	// justify-content: center;
+	// align-items: center;
+}
+
 .container {
 	max-width: 375px;
 	@include flex(column);
 	text-align: center;
 	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	margin: auto;
 }
