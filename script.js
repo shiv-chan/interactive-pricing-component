@@ -3,12 +3,7 @@ const pageviewsNum = document.querySelector('#pageviews-num');
 const priceNum = document.querySelector('#price-num');
 const range = document.querySelector('input[type=range]');
 
-let isHolding = false;
-
 function handleRange(e) {
-	e.preventDefault();
-	if (!isHolding) return;
-
 	const value = range.value;
 	if (value <= 20) {
 		pageviewsNum.textContent = '10K';
@@ -29,11 +24,21 @@ function handleRange(e) {
 	if (checkbox.classList.contains('checked')) applyDiscount();
 }
 
-// for desktop ver.
-range.addEventListener('mousemove', handleRange);
-range.addEventListener('mousedown', () => (isHolding = true));
-range.addEventListener('mouseup', () => (isHolding = false));
-range.addEventListener('mouseout', () => (isHolding = false));
+function onStart() {
+  range.addEventListener('mousemove', handleRange);
+  range.addEventListener('touchmove', handleRange);
+}
+
+function onStop() {
+  range.removeEventListener('mousemove', handleRange);
+  range.removeEventListener('touchmove', handleRange);
+}
+
+range.addEventListener('mousedown', onStart);
+range.addEventListener('touchstart', onStart);
+
+range.addEventListener('mouseup', onStop);
+range.addEventListener('touchend', onStop);
 
 // toggle switch function
 const checkbox = document.querySelector('input[type=checkbox]');
